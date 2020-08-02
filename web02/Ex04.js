@@ -32,7 +32,7 @@ function connect(request, response) {
       });
       fs.readFile("test.js", (err, data) => {
         if (err) throw err;
-        response.write("<script>" + data + "</script>");
+        response.write(data);
         response.end();
       });
       break;
